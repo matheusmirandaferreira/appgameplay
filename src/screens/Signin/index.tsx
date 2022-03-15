@@ -8,11 +8,6 @@ import { styles } from './style';
 export function SignIn() {
   return (
     <View style={styles.container}>
-      <StatusBar
-        barStyle="light-content"
-        backgroundColor="transparent"
-        translucent
-      />
       <Image
         source={IllustrationImg}
         resizeMode="stretch"
