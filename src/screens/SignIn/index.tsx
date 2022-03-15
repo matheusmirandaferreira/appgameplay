@@ -1,3 +1,4 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, StatusBar } from 'react-native';
 
@@ -6,6 +7,12 @@ import { ButtonIcon } from '../../components/ButtonIcon';
 import { styles } from './style';
 
 export function SignIn() {
+  const navigation = useNavigation<any>();
+
+  function handleSignIn() {
+    navigation.navigate('Home');
+  }
+
   return (
     <View style={styles.container}>
       <Image
@@ -23,7 +30,7 @@ export function SignIn() {
         <Text style={styles.subtitle}>
           Crie grupos para jogar seus games{'\n'}favoritos com seus amigos
         </Text>
-        <ButtonIcon activeOpacity={0.7} title="Entrar com Discord" />
+        <ButtonIcon title="Entrar com Discord" onPress={handleSignIn} />
       </View>
     </View>
   );

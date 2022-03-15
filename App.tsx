@@ -1,3 +1,4 @@
+import 'react-native-gesture-handler';
 import React from 'react';
 import { useFonts } from 'expo-font';
 import { StatusBar } from 'react-native';
@@ -8,7 +9,7 @@ import {
 } from '@expo-google-fonts/rajdhani';
 import AppLoading from 'expo-app-loading';
 
-import { SignIn } from './src/screens/Signin';
+import { Routes } from './src/routes';
 import { Background } from './src/components/Background';
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
         backgroundColor="transparent"
         translucent
       />
-      <SignIn />
+      <Routes />
     </Background>
   );
 }

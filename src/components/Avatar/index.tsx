@@ -3,20 +3,20 @@ import { LinearGradient } from 'expo-linear-gradient';
 
 import { styles } from './styles';
 import { theme } from '../../global/styles/theme';
+import { Image } from 'react-native';
 
 type Props = {
-  children: React.ReactNode;
+  urlImage: string;
 };
 
-export function Background({ children }: Props) {
-  const { secondary80, secondary100 } = theme.colors;
-
+export function Avatar({ urlImage }: Props) {
+  const { secondary50, secondary70 } = theme.colors;
   return (
     <LinearGradient
       style={styles.container}
-      colors={[secondary80, secondary100]}
+      colors={[secondary50, secondary70]}
     >
-      {children}
+      <Image source={{ uri: urlImage }} style={styles.avatar} />
     </LinearGradient>
   );
 }
